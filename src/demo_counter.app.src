@@ -10,7 +10,7 @@
         jsx
     ]},
     {env, [
-        {http_port, 8080}
+        {http_port, 8082}
     ]},
     {modules, []},
     {licenses, ["MIT"]},
