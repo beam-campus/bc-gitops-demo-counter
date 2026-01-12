@@ -1,0 +1,21 @@
+{application, demo_counter, [
+    {description, "Demo counter app for bc_gitops - shows hot code reload"},
+    {vsn, "0.1.0"},
+    {registered, [demo_counter_server]},
+    {mod, {demo_counter_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        cowboy,
+        jsx
+    ]},
+    {env, [
+        {http_port, 8080}
+    ]},
+    {modules, []},
+    {licenses, ["MIT"]},
+    {links, [
+        {"GitHub", "https://github.com/beam-campus/bc-gitops-demo-counter"},
+        {"bc_gitops", "https://github.com/beam-campus/bc-gitops"}
+    ]}
+]}.

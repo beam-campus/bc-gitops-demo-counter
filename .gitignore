@@ -1,17 +1,29 @@
-.eunit
-*.o
+# rebar3
+_build/
+_checkouts/
+.rebar3/
+rebar.lock
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Erlang
 *.beam
 *.plt
 erl_crash.dump
+*.ez
+ebin/*.beam
+
+# Legacy rebar
+.rebar
+deps/
+
+# Test
+.eunit
 .concrete/DEV_MODE
 
-# rebar 2.x
-.rebar
-rel/example_project
-ebin/*.beam
-deps
-
-# rebar 3
-.rebar3
-_build/
-_checkouts/
+# OS
+.DS_Store
+Thumbs.db
