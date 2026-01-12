@@ -1,6 +1,6 @@
 {application, demo_counter, [
     {description, "Demo counter app for bc_gitops - shows hot code reload"},
-    {vsn, "0.1.2"},
+    {vsn, "0.1.3"},
     {author, "BEAM Campus"},
     {registered, [demo_counter_server]},
     {mod, {demo_counter_app, []}},

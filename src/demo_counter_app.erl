@@ -13,7 +13,8 @@ start(_StartType, _StartArgs) ->
             {"/count", demo_counter_http, []},
             {"/increment", demo_counter_http, []},
             {"/reset", demo_counter_http, []},
-            {"/health", demo_counter_http, []}
+            {"/health", demo_counter_http, []},
+            {"/info", demo_counter_http, []}
         ]}
     ]),
 
