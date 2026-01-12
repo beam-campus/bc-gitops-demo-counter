@@ -39,6 +39,15 @@ handle_request(<<"GET">>, <<"/health">>) ->
         count => Count
     }};
 
+%% GET /version - Version info
+handle_request(<<"GET">>, <<"/version">>) ->
+    {ok, Vsn} = application:get_key(demo_counter, vsn),
+    {200, #{
+        app => <<"demo_counter">>,
+        version => list_to_binary(Vsn),
+        description => <<"Demo counter for bc_gitops hot reload">>
+    }};
+
 %% Method not allowed
 handle_request(Method, Path) ->
     {405, #{

@@ -1,6 +1,6 @@
 {application, demo_counter, [
     {description, "Demo counter app for bc_gitops - shows hot code reload"},
-    {vsn, "0.1.0"},
+    {vsn, "0.1.1"},
     {registered, [demo_counter_server]},
     {mod, {demo_counter_app, []}},
     {applications, [
