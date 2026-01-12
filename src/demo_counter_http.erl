@@ -37,12 +37,12 @@ handle_request(<<"GET">>, <<"/health">>) ->
 %% GET /info - Info
 handle_request(<<"GET">>, <<"/info">>) ->
   {ok, Vsn} = application:get_key(demo_counter, vsn),
-  {ok, Author} = application:get_key(demo_counter, author),
+  {ok, Desc} = application:get_key(demo_counter, description),
   {200,
    #{app => <<"demo_counter">>,
      version => list_to_binary(Vsn),
-     author => list_to_binary(Author),
-     description => <<"Demo counter for bc_gitops hot reload">>}};
+     author => <<"BEAM Campus">>,
+     description => list_to_binary(Desc)}};
 %% Method not allowed
 handle_request(Method, Path) ->
   {405,
