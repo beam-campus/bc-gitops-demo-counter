@@ -1,0 +1,21 @@
+artifact:
+  id: io.beamcampus.demo.counter
+  name: Demo Counter
+  type: service
+  version: 0.1.5
+  description: Simple HTTP counter with hot code reload demo
+
+package:
+  source:
+    type: mix
+    release: demo_counter
+
+# Health check endpoint
+health:
+  type: http
+  port: 8082
+  path: /health
+
+# Runtime configuration
+env:
+  HTTP_PORT: 8082
