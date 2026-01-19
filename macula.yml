@@ -7,8 +7,7 @@ artifact:
 
 package:
   source:
-    type: mix
-    release: demo_counter
+    type: rebar3
 
 # Health check endpoint
 health:
